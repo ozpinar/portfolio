@@ -3,6 +3,7 @@ const leftArrow = document.querySelector(".arrow-left");
 const rightArrow = document.querySelector(".arrow-right");
 const indicatorParent = document.querySelector(".works__controller ul");
 const menuBtn = document.querySelector(".menu-btn");
+const navUL = document.querySelector(".nav__navigation");
 
 
 let sectionIndex = 0;
@@ -32,4 +33,5 @@ leftArrow.addEventListener('click', () => {
 
 menuBtn.addEventListener('click', ()=>{
     menuBtn.classList.toggle('open');
+    navUL.classList.toggle('show');
 })
