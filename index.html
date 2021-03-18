@@ -12,14 +12,16 @@
 </head>
 <body>
     <nav>
-        <img src="logo.svg" alt="logo" class="nav__logo">
+        <a href="#main">
+            <img src="logo.svg" alt="logo" class="nav__logo">
+        </a>
         <div class="menu-btn">
             <div class="menu-btn__burger"></div>
         </div>
         <ul class="nav__navigation">
-            <li><a href="">Works</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a class="nav__link" href="#works">Works</a></li>
+            <li><a class="nav__link" href="#about">About</a></li>
+            <li><a class="nav__link" href="#contact">Contact</a></li>
             <li>
                 <div class="header__socialmedia">
                     <a href="https://github.com/ozpinar" target="_blank" rel="noreferrer noopener" >
@@ -41,20 +43,20 @@
             </li>
         </ul>
     </nav>
-    <main>
+    <main id="main" >
         <div class="main__text">
             <h1>Hey, I am <span class="pink">Berk</span> <br>
                 a <span class="pink">computer science</span> student 
                 interested in  <br>
                 <span class="pink">Web Development.</span>
             </h1>
-            <button class="main__button">Check out my works</button>
+            <button class="main__button"><a href="#works">Check out my works</a></button>
         </div>
         <div class="main__illustration">
             <img src="illustration.svg" alt="web dev illustration" class="illustration">
         </div>
     </main>
-    <div class="works">
+    <div id="works" class="works">
         <div class="works__title">
             <div class="pinkbar"></div>
             <span class="works__title__span">Works</span>
@@ -80,55 +82,54 @@
                                     favourite books and movies and follow other users. <br>
                                     Developed using, ReactJS, Node.js and MongoDB.
                                 </p>
-                                <button class="info__button">Visit <img src="right.svg" alt=""></button>
+                                <a href="https://myweblib.netlify.app"><button class="info__button">Visit <img src="right.svg" alt=""></button></a>
                             </div>
                         </div>
                         <div class="works__slider__image">
-                            <img class="image__project image" src="myweblib.png" alt="">
+                            <img class="image__project image myweblib" src="myweblib.png" alt="">
                         </div>
                     </section>
                     <section class="slider__work2" >
                         <div class="works__slider__info">
                             <div class="info__headline">
-                                <h1>MyWebLib</h1>
+                                <h1>todo'ist</h1>
                                 <div class="headline__subtitle">
                                     <div class="pinkbar"></div>
-                                    <span>Social Media</span>
+                                    <span>Web Application</span>
                                 </div>
                             </div>
                             <div class="info__description">
                                 <p>
-                                    A social media platform that users can share their <br>
-                                    favourite books and movies and follow other users. <br>
-                                    Developed using, ReactJS, Node.js and MongoDB.
+                                    A web application that users can save their to-do lists<br>
+                                    and indicate finished ones. It uses local storage so list does not go away. <br>
+                                    Developed using, JavaScript, CSS and HTML.
                                 </p>
-                                <button class="info__button">Visit <img src="right.svg" alt=""></button>
+                                <a href="https://ozpinar.github.io/ilmiotodo"><button class="info__button">Visit <img src="right.svg" alt=""></button></a>
                             </div>
                         </div>
                         <div class="works__slider__image">
-                            <img class="image__project image" src="myweblib.png" alt="">
+                            <img class="image__project image todoist" src="todoist.png" alt="">
                         </div>
                     </section>
                     <section class="slider__work3" >
                         <div class="works__slider__info">
                             <div class="info__headline">
-                                <h1>MyWebLib</h1>
+                                <h1>Oishii</h1>
                                 <div class="headline__subtitle">
                                     <div class="pinkbar"></div>
-                                    <span>Social Media</span>
+                                    <span>Website Design</span>
                                 </div>
                             </div>
                             <div class="info__description">
                                 <p>
-                                    A social media platform that users can share their <br>
-                                    favourite books and movies and follow other users. <br>
-                                    Developed using, ReactJS, Node.js and MongoDB.
+                                    A website designed and developed for a thai restaurant <br>
+                                    Developed using, JavaScript, CSS, HTML.
                                 </p>
-                                <button class="info__button">Visit <img src="right.svg" alt=""></button>
+                                <a href="https://ozpinar.github.io/oishii"><button class="info__button">Visit <img src="right.svg" alt=""></button></a>
                             </div>
                         </div>
                         <div class="works__slider__image">
-                            <img class="image__project image" src="myweblib.png" alt="">
+                            <img class="image__project image oishii" src="oishii.png" alt="">
                         </div>
                     </section>
                 </div>
@@ -144,7 +145,7 @@
             <img class="arrow-right" src="right.svg" alt="right arrow">
         </div>
     </div>
-    <div class="about">
+    <div id="about" class="about">
         <div class="about__title">
             <div class="pinkbar"></div>
             <span class="about__title__span">About</span>
@@ -189,7 +190,7 @@
             </div>
         </div>
     </div>
-    <div class="contact">
+    <div id="contact" class="contact">
         <div class="contact__title">
             <div class="pinkbar"></div>
             <span class="contact__title__span">Contact</span>
@@ -203,14 +204,14 @@
             </p>
         </div>
         <div class="contact__form">
-            <form class="contact__form__form" action="">
+            <form class="contact__form__form" action="https://formspree.io/f/xpzovvav" method="POST">
                 <label class="form__name" for="">Your name</label> <br>
-                <input type="text" required> <br>
+                <input name="name" type="text" required> <br>
                 <label class="form__email" for="">Your e-mail address</label> <br>
-                <input type="email" name="" id="" required> <br>
+                <input name="email" type="email" name="" id="" required> <br>
                 <label class="form__message" for="">Your message</label> <br>
-                <textarea name="" id="" cols="30" rows="10"></textarea required> <br>
-                <input type="submit" value="Send message">
+                <textarea name="message" id="" cols="30" rows="10"></textarea required> <br>
+                <input class="button__submit" type="submit" value="Send message">
             </form>
         </div>
     </div>

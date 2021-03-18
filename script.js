@@ -5,6 +5,7 @@ const indicatorParent = document.querySelector(".works__controller ul");
 const menuBtn = document.querySelector(".menu-btn");
 const navUL = document.querySelector(".nav__navigation");
 const body = document.querySelector("body");
+const links = document.querySelectorAll(".nav__link")
 
 
 let sectionIndex = 0;
@@ -36,4 +37,12 @@ menuBtn.addEventListener('click', ()=>{
     menuBtn.classList.toggle('open');
     navUL.classList.toggle('show');
     body.classList.toggle('fixed-pos');
+})
+
+links.forEach((link)=>{
+    link.addEventListener('click', ()=>{
+        menuBtn.classList.remove('open');
+        navUL.classList.remove('show');
+        body.classList.remove('fixed-pos');
+    })
 })

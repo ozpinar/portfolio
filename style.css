@@ -9,9 +9,22 @@
 html { 
     height:100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body { 
     min-height:100%;
+}
+a {
+    text-decoration: none;
+}
+
+button, input[type=submit]{
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+button:hover, input[type=submit]:hover{
+    background-color: #25294B;
 }
 
 nav{
@@ -147,6 +160,10 @@ main {
     background-color: #25294B;
 }
 
+.main__button a {
+    text-decoration: none;
+}
+
 .main__illustration{
     margin-right: 10vw;
     margin-top: 35vh;
@@ -204,9 +221,6 @@ main {
     font-size: 3em;
 }
 
-.works__container{
-   
-}
 
 .works__carousel{
     overflow: hidden;
@@ -224,11 +238,10 @@ main {
     flex-basis: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.works__slider .slider__work1{
-}
 
 .works__controller{
     height: 5vh;
@@ -253,13 +266,29 @@ main {
     gap: 5vh;
 }
 
-.works__slider__image{
-    
-}
-.image{
+
+.image.myweblib{
     background-image: url(background.png);
     transition: all .6s;
     border-radius: 60px;
+}
+
+.image.todoist{
+    transform: scale(0.95);
+    background-image: url(background2.png);
+    background-position: 10px 0px;
+    transition: all .6s;
+}
+
+.image.oishii{
+    background-image: url(background3.png);
+    transition: all .6s;
+    padding: 1em;
+}
+
+.image.todoist:hover{
+    background-position: 5px -5px;
+    transform: scale(1.01);
 }
 
 .image:hover{
@@ -436,6 +465,7 @@ main {
     padding: .5em 1em;
 }
 
+
 footer{
     padding-top: 10vh;
     min-height: 20vh;
@@ -492,8 +522,8 @@ footer span {
 
 @media only screen and (max-width: 1365px) {
     body.fixed-pos{
-        position: fixed;
-        width: 100vw;
+       overflow: hidden;
+       height: 100%;
     }
 
     body{
@@ -554,8 +584,8 @@ footer span {
     }
 
     .nav__navigation.show{
-        clip-path: circle(1200px at 90% -20%);
-        -webkit-clip-path: circle(1200px at 90% -20%);
+        clip-path: circle(300vw at 90% -20%);
+        -webkit-clip-path: circle(300vw at 90% -20%);
     }
 
     main {
@@ -639,10 +669,6 @@ footer span {
     .about__contact{
         margin-top: 2vh;
         margin-bottom: 2vh;
-    }
-
-    .contact{
-
     }
 
     .contact__headline h2{
